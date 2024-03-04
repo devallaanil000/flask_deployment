@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        @keyframes backgroundAnimation {
+            0% { background-color: #ffcccc; }
+            50% { background-color: #ccffff; }
+            100% { background-color: #ffcccc; }
+        }
+
+        body {
+            animation: backgroundAnimation 10s infinite;
+            font-family: Arial, sans-serif; /* Adding a fallback font */
+            margin: 0; /* Resetting default margin */
+            padding: 0; /* Resetting default padding */
+            height: 100vh; /* Making sure the body covers the whole viewport height */
+            display: flex; /* Using flexbox for centering */
+            justify-content: center; /* Centering horizontally */
+            align-items: center; /* Centering vertically */
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px; /* Adding some spacing below the heading */
+            color: #333; /* Changing text color */
+        }
+
+        form {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555; /* Changing label color */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px; /* Adjusting input padding */
+            margin-bottom: 15px; /* Increasing space between inputs */
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box; /* Making sure padding doesn't affect width */
+        }
+
+        button {
+            width: 100%;
+            padding: 12px; /* Adjusting button padding */
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Adding smooth transition */
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Login</h2>
+    <form action="/login" method="post">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+</body>
+</html>
